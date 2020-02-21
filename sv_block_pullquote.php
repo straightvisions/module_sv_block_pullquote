@@ -60,19 +60,16 @@
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_pullquote {
-			$enqueue = true;
-			
-			if(!is_admin()){
+			if( ! is_admin() ) {
 				$post = get_post();
+				
 				if ( !has_block( 'pullquote', $post )) {
-					$enqueue = false;
+					return $this;
 				}
 			}
 			
-			if($enqueue) {
-				$this->get_script( 'default' )->set_is_enqueued();
-				$this->get_script( 'inline_config' )->set_is_enqueued();
-			}
+			$this->get_script( 'default' )->set_is_enqueued();
+			$this->get_script( 'inline_config' )->set_is_enqueued();
 			
 			return $this;
 		}
