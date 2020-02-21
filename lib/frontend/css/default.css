@@ -1,0 +1,10 @@
+.wp-block-pullquote {
+	border-top-width: 4px;
+	border-bottom-width: 4px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+}
+.wp-block-pullquote > cite {
+	grid-area: author;
+	font-size: .8rem;
+}
