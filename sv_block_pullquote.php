@@ -26,20 +26,21 @@
 		}
 		
 		protected function load_settings(): sv_block_pullquote {
-			$this->get_setting( 'border_top_color' )
-				 ->set_title( __( 'Border top color', 'sv100' ) )
-				 ->set_default_value( '0,0,0' )
-				 ->load_type( 'color' );
-			
-			$this->get_setting( 'border_bottom_color' )
-				 ->set_title( __( 'Border bottom color', 'sv100' ) )
-				 ->set_default_value( '0,0,0' )
-				 ->load_type( 'color' );
-			
 			$this->get_setting( 'margin' )
-				 ->set_title( __( 'Margin', 'sv100' ) )
-				 ->load_type( 'margin' );
-			
+				->set_title( __( 'Margin', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'margin' );
+
+			$this->get_setting( 'padding' )
+				->set_title( __( 'Padding', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'margin' );
+
+			$this->get_setting( 'border' )
+				->set_title( __( 'Border', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'border' );
+
 			return $this;
 		}
 		
