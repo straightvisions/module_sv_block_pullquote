@@ -14,15 +14,16 @@
 	class sv_block_pullquote extends init {
 		public function init() {
 			$this->set_module_title( __( 'Block: Pullquote', 'sv100' ) )
-				 ->set_module_desc( __( 'Settings for Gutenberg Block', 'sv100' ) )
-				 ->load_settings()
-				 ->register_scripts()
-				 ->set_section_title( $this->get_module_title() )
-				 ->set_section_desc( $this->get_module_desc() )
-				 ->set_section_type( 'settings' )
+				->set_module_desc( __( 'Settings for Gutenberg Block', 'sv100' ) )
+				->load_settings()
+				->register_scripts()
+				->set_section_title( $this->get_module_title() )
+				->set_section_desc( $this->get_module_desc() )
+				->set_section_type( 'settings' )
 				->set_section_template_path( $this->get_path( 'lib/backend/tpl/settings.php' ) )
-				 ->get_root()
-				 ->add_section( $this );
+				->set_section_order(140)
+				->get_root()
+				->add_section( $this );
 		}
 		
 		protected function load_settings(): sv_block_pullquote {
