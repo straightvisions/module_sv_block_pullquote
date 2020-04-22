@@ -88,12 +88,8 @@
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_pullquote {
-			if( ! is_admin() ) {
-				$post = get_post();
-				
-				if ( !has_block( 'pullquote', $post )) {
-					return $this;
-				}
+			if(!$this->has_block_frontend('pullquote')){
+				return $this;
 			}
 			
 			$this->get_script( 'default' )->set_is_enqueued();
