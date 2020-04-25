@@ -27,7 +27,7 @@
 		}
 		
 		protected function load_settings(): sv_block_pullquote {
-			$this->get_setting( 'font_family' )
+			$this->get_setting( 'font' )
 				->set_title( __( 'Font Family', 'sv100' ) )
 				->set_description( __( 'Choose a font for your text.', 'sv100' ) )
 				->set_options( $this->get_module( 'sv_webfontloader' )->get_font_options() )
@@ -73,11 +73,11 @@
 		
 		protected function register_scripts(): sv_block_pullquote {
 				// Register Styles
-				$this->get_script( 'default' )
+				$this->get_script( 'common' )
 					->set_is_gutenberg()
-					 ->set_path( 'lib/frontend/css/default.css' );
+					 ->set_path( 'lib/frontend/css/common.css' );
 				
-				$this->get_script( 'inline_config' )
+				$this->get_script( 'config' )
 					 ->set_path( 'lib/frontend/css/config.php' )
 					->set_is_gutenberg()
 					 ->set_inline( true );
@@ -92,8 +92,8 @@
 				return $this;
 			}
 			
-			$this->get_script( 'default' )->set_is_enqueued();
-			$this->get_script( 'inline_config' )->set_is_enqueued();
+			$this->get_script( 'common' )->set_is_enqueued();
+			$this->get_script( 'config' )->set_is_enqueued();
 			
 			return $this;
 		}
