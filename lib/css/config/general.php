@@ -1,6 +1,6 @@
 <?php
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-pullquote' : '.sv100_sv_content_wrapper article .wp-block-pullquote',
+		is_admin() ? '.editor-styles-wrapper .wp-block-pullquote' : '.wp-block-pullquote',
 		array_merge(
 			$module->get_setting('padding')->get_css_data('padding'),
 			$module->get_setting('margin')->get_css_data(),
@@ -9,7 +9,7 @@
 	);
 
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-pullquote' : '.sv100_sv_content_wrapper article .wp-block-pullquote',
+		is_admin() ? '.editor-styles-wrapper .wp-block-pullquote' : '.wp-block-pullquote',
 		array_merge(
 			$module->get_setting('font')->get_css_data('font-family'),
 			$module->get_setting('font_size')->get_css_data('font-size','','px'),
