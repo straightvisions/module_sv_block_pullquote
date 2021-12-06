@@ -6,13 +6,6 @@
 .wp-block-pullquote.alignleft, .wp-block-pullquote.alignright {
 	max-width: 420px;
 }
-.wp-block-pullquote.alignleft p, .wp-block-pullquote.alignright p {
-	font-size: 1.25em;
-}
-.wp-block-pullquote p {
-	font-size: 1.75em;
-	line-height: 1.6;
-}
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	position: relative;
