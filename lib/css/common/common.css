@@ -7,7 +7,8 @@
 	margin:0;
 }
 
-.wp-block-pullquote p {
+.wp-block-pullquote p,
+.wp-block-pullquote.is-style-solid-color blockquote p{
 	font-size: inherit;
 	line-height: inherit;
 	font-family: inherit;
