@@ -63,6 +63,52 @@
 				->set_is_responsive(true)
 				->load_type( 'border' );
 
+			$this->load_settings_cite();
+
+			return $this;
+		}
+		protected function load_settings_cite(): sv_block_pullquote {
+			$this->get_setting( 'cite_font' )
+				->set_title( __( 'Font Family', 'sv100' ) )
+				->set_description( __( 'Choose a font for your text.', 'sv100' ) )
+				->set_options( $this->get_module( 'sv_webfontloader' ) ? $this->get_module( 'sv_webfontloader' )->get_font_options() : array('' => __('Please activate module SV Webfontloader for this Feature.', 'sv100')) )
+				->set_is_responsive(true)
+				->load_type( 'select' );
+
+			$this->get_setting( 'cite_font_size' )
+				->set_title( __( 'Font Size', 'sv100' ) )
+				->set_description( __( 'Font Size in pixel.', 'sv100' ) )
+				->set_default_value( 16 )
+				->set_is_responsive(true)
+				->load_type( 'number' );
+
+			$this->get_setting( 'cite_line_height' )
+				->set_title( __( 'Line Height', 'sv100' ) )
+				->set_description( __( 'Set line height as multiplier or with a unit.', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'text' );
+
+			$this->get_setting( 'cite_text_color' )
+				->set_title( __( 'Text Color', 'sv100' ) )
+				->set_default_value( '30,30,30' )
+				->set_is_responsive(true)
+				->load_type( 'color' );
+
+			$this->get_setting( 'cite_margin' )
+				->set_title( __( 'Margin', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'margin' );
+
+			$this->get_setting( 'cite_padding' )
+				->set_title( __( 'Padding', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'margin' );
+
+			$this->get_setting( 'cite_border' )
+				->set_title( __( 'Border', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'border' );
+
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_pullquote {
