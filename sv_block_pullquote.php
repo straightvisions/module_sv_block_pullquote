@@ -28,7 +28,6 @@
 			$this->get_setting( 'font_size' )
 				->set_title( __( 'Font Size', 'sv100' ) )
 				->set_description( __( 'Font Size in pixel.', 'sv100' ) )
-				->set_default_value( 16 )
 				->set_is_responsive(true)
 				->load_type( 'number' );
 
@@ -40,7 +39,6 @@
 
 			$this->get_setting( 'text_color' )
 				->set_title( __( 'Text Color', 'sv100' ) )
-				->set_default_value( '#1e1e1e' )
 				->set_is_responsive(true)
 				->load_type( 'color' );
 
@@ -80,7 +78,6 @@
 			$this->get_setting( 'cite_font_size' )
 				->set_title( __( 'Font Size', 'sv100' ) )
 				->set_description( __( 'Font Size in pixel.', 'sv100' ) )
-				->set_default_value( 16 )
 				->set_is_responsive(true)
 				->load_type( 'number' );
 
