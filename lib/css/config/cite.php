@@ -7,7 +7,6 @@
 			$module->get_setting('cite_line_height')->get_css_data('line-height'),
 			$module->get_setting('cite_text_color')->get_css_data(),
 			$module->get_setting('cite_padding')->get_css_data('padding'),
-			$module->get_setting('cite_margin')->get_css_data(),
-			$module->get_setting('cite_border')->get_css_data()
+			$module->get_setting('cite_margin')->get_css_data()
 		)
 	);
