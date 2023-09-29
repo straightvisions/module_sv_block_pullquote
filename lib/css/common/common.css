@@ -1,6 +1,5 @@
 .wp-block-pullquote > cite {
 	grid-area: author;
-	font-size: .8rem;
 }
 .wp-block-pullquote > blockquote{
 	padding:0;
